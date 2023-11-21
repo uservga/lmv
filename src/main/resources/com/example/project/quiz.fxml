@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.QuizController">
+    <children>
+        <GridPane VBox.vgrow="ALWAYS" vgap="30.0">
+            <columnConstraints>
+                <ColumnConstraints maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                <ColumnConstraints maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                <ColumnConstraints maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                <ColumnConstraints maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS" />
+                <RowConstraints vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <Text styleClass="modal-text" text="CheckBox" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Text styleClass="modal-text" text="ChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Text styleClass="modal-text" text="ComboBox" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Text styleClass="modal-text" text="RadioButton" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                <Text styleClass="text-count" text="Мій улюблений колір?" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Text styleClass="text-count" text="Я навчаюсь в ЛДУ БЖД?" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Text styleClass="text-count" text="Мої уподобання:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Text styleClass="text-count" text="Яка машина мені подобається?" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <VBox  GridPane.columnIndex="0" GridPane.rowIndex="3" spacing="15">
+                    <CheckBox fx:id="yellowCheckBox" text="Жовтий" styleClass="modal-text" />
+                    <CheckBox fx:id="redCheckBox" text="Червоний" styleClass="modal-text" />
+                    <CheckBox fx:id="blackCheckBox" text="Чорний" styleClass="modal-text" />
+                    <CheckBox fx:id="whiteCheckBox" text="Білий" styleClass="modal-text" />
+
+                    <Button text="Відповісти" onAction="#checkAnswerColor" />
+                </VBox >
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="3" spacing="15">
+                    <ChoiceBox fx:id="choiceBox" styleClass="modal-text">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Правда" />
+                                <String fx:value="Брехня" />
+                            </FXCollections>
+                        </items>
+                    </ChoiceBox>
+                    <Button text="Відповісти" onAction="#checkAnswerStudy" />
+                </VBox>
+                <VBox GridPane.columnIndex="2" GridPane.rowIndex="3" spacing="15">
+                    <ComboBox styleClass="modal-text">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Спорт" />
+                                <String fx:value="Відпочинок" />
+                                <String fx:value="Прогулянка" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                </VBox>
+                <VBox GridPane.columnIndex="3" GridPane.rowIndex="3" spacing="15">
+                    <RadioButton text="Audi" styleClass="modal-text" fx:id="audiRadioButton" />
+                    <RadioButton text="BMW" styleClass="modal-text" fx:id="bmwRadioButton" />
+                    <RadioButton text="Nissan" styleClass="modal-text" fx:id="nissanRadioButton" />
+                    <RadioButton text="Volkswagen" styleClass="modal-text" fx:id="volkswagenRadioButton" />
+                    <Button text="Відповісти" onAction="#checkAnswerCar"/>
+                </VBox>
+
+                <Text fx:id="answerTextColor" styleClass="text-count" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Text fx:id="answerTextStudy" styleClass="text-count" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Text fx:id="answerTextCar" styleClass="text-count" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+    </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</VBox>

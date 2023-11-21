@@ -1,0 +1,66 @@
+.v-box-costume {
+    -fx-background-color: #B9B0BB;
+}
+
+.button-costume {
+    -fx-padding: 10px;
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: black;
+    -fx-background-color: linear-gradient(to bottom, #DEB0BA, #BF6F81);
+    -fx-border-width: none;
+    -fx-background-radius: 0;
+}
+
+.button-costume:hover {
+    -fx-background-color: linear-gradient(to bottom, #BF6F81, #BF6F81);
+    -fx-cursor: hand;
+}
+
+.button-costume:armed {
+    -fx-background-color: linear-gradient(to bottom, #BF6F81, #BF6F81);
+}
+
+.text-field-costume {
+    -fx-padding: 10px;
+    -fx-control-inner-background: #D9D9D9;
+    -fx-prompt-text-fill: black;
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-background-radius: 0;
+}
+
+.text-field-costume_modal {
+    -fx-padding: 10px;
+    -fx-control-inner-background: #D9D9D9;
+    -fx-prompt-text-fill: black;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 12px;
+    -fx-background-radius: 0;
+}
+
+.text-count {
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: normal;
+    -fx-font-size: 12px;
+}
+
+.modal-text {
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.table-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-width: 0;
+}

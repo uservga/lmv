@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style.css" styleClass="v-box-costume" fx:controller="com.example.project.AddItemDialogController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="416.0" spacing="20.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Text text="П.І.П." wrappingWidth="51.107421875" styleClass="modal-text"/>
+                <TextField fx:id="nameField" prefHeight="40.0" prefWidth="225.0" promptText="Введіть П.І.П." styleClass="text-field-costume_modal"/>
+                <Button fx:id="okButton" mnemonicParsing="false" onAction="#handleOkButtonAction" prefHeight="40.0" prefWidth="140.0" text="OK" styleClass="button-costume" disable="true"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+            <children>
+                <Text text="Телефон" wrappingWidth="51.349609375" styleClass="modal-text"/>
+                <TextField fx:id="phoneField" prefHeight="40.0" prefWidth="225.0" promptText="Введіть номер телефону" styleClass="text-field-costume_modal"/>
+                <Button fx:id="cancelButton" onAction="#handleCancelButtonAction" prefHeight="40.0" prefWidth="140.0" text="Відміна" styleClass="button-costume"/>
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+    </padding>
+</VBox>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" styleClass="v-box-costume" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.HelloController">
+   <children>
+      <HBox minWidth="600.0" prefHeight="100.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="40.0" prefWidth="140.0" styleClass="button-costume" text="Добавити">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleEditButtonAction" prefHeight="40.0" prefWidth="140.0" styleClass="button-costume" text="Редагувати">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="40.0" prefWidth="140.0" styleClass="button-costume" text="Видалити">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <AnchorPane minWidth="600.0" prefHeight="100.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="searchTextField" layoutX="27.0" layoutY="27.0" prefHeight="40.0" prefWidth="310.0" promptText="Дані про користувача" styleClass="text-field-costume" AnchorPane.leftAnchor="30.0" />
+            <Button layoutX="431.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleSearchButtonAction" prefHeight="40.0" prefWidth="140.0" styleClass="button-costume" text="Пошук" AnchorPane.rightAnchor="30.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </AnchorPane>
+      <AnchorPane minWidth="600.0" prefHeight="300.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView fx:id="tableView" prefHeight="300.0" prefWidth="600.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+               <columns>
+                  <TableColumn fx:id="nameColumn" prefWidth="259.0" text="П.І.П">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="phoneColumn" prefWidth="280.0" text="Телефон">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="phone" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </AnchorPane>
+      <AnchorPane minWidth="600.0" prefHeight="100.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label styleClass="text-count" text="Кількість записів:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="recordCountLabel" layoutX="130.0" layoutY="30.0" styleClass="text-count" text="0" AnchorPane.leftAnchor="130.0" />
+            <Button layoutX="507.0" layoutY="16.0" mnemonicParsing="false" styleClass="button-costume" text="Тест" onAction="#handleQuizButtonAction"/>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
